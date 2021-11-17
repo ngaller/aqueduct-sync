@@ -144,10 +144,10 @@ const faucet = {
   onRecord: function(localConnection, record) {
     // take action with the received record.
     // if this function returns a string, it will be interpreted as the name
-    // of a pipe to run the flow (inbound sync) for
+    // of a pipe to run the flow (inbound sync) for.
     // if it returns a number, the record will be re-processed after that many seconds (using a
-    // "reread" event)
-    // a given pipe will be triggered only once per invocation of the faucet
+    // "reread" event).
+    // a given pipe will be triggered only once per invocation of the faucet.
   }
 }
 aqueduct.addFaucet(faucet)
