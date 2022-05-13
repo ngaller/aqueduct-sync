@@ -37,6 +37,8 @@ of:
 
  * the local collection name
  * the remote collection name
+ * optionally, a `remoteRead` collection name, used for inbound sync (in case a different connection
+   needs to be used for read and write events)
  * the fields to be sent between the 2 systems (other fields will be removed from the output) - this can be ommitted, to send and keep all the fields
  of the prepare function before sending the object on, and from the input of the cleanse function)
  * the cleanse (from remote to local) and prepare (from local to remote) functions to be run when data is exchanged.  This can be straight mapping, or calculations (but for simple mapping, better use the map property instead).  If the cleanse method does not return an object, then the record is not inserted (but the sync state is still updated).  This allows for custom skipping logic.
